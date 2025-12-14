@@ -1,12 +1,7 @@
 {
-  "name": "instagramclone",
+  "name": "instagram",
   "version": "1.0.0",
   "description": "",
-  "keywords": [
-    "Instagram",
-    "node",
-    "javascript"
-  ],
   "license": "ISC",
   "author": "Yash Dashore",
   "type": "commonjs",
