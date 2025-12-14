@@ -26,7 +26,6 @@ const UploadOnCloud = async (FileOnServer) => {
 const getPublicIdFromUrl = (url) => {
     if (!url) return null;
     try {
-        // Extract the public id from the URL, handling optional versioning
         const match = url.match(/upload\/(?:v\d+\/)?(.+)\.[^.]+$/);
         return match ? decodeURIComponent(match[1]) : null;
     } catch (error) {
