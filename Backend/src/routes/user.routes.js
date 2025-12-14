@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { verifyJWT } from "../middlewares/auth.js";
-import { Upload } from "../middleware/multer.middleware.js";
+import { Upload } from "../middlewares/multer.js";
 
 import {
     registerUser, loginUser,
@@ -21,4 +21,4 @@ UserRouter.route("/logout").post(verifyJWT, logoutUser);
 UserRouter.route("/follow/:userId").post(verifyJWT, followUser);
 UserRouter.route("/unfollow/:userId").post(verifyJWT, unfollowUser);
 
-export { UserRouter };
+export default UserRouter;

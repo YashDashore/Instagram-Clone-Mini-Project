@@ -1,8 +1,8 @@
 import { AsyncHandler } from "../utils/AsyncHandler.js"
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js"
-import Post from "../models/post.model.js";
-import { UploadOnCloud, DeleteFromCloud } from "../utils/CloudinaryUpload.js";
+import {Post} from "../models/post.model.js";
+import { UploadOnCloud, DeleteFromCloud } from "../utils/Cloudinary.js";
 
 const createPost = AsyncHandler(async (req, res) => {
     const { caption } = req.body;

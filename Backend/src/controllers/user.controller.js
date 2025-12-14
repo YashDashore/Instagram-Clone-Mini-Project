@@ -2,7 +2,7 @@ import { AsyncHandler } from "../utils/AsyncHandler.js"
 import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js"
 import { User } from "../models/user.model.js";
-import { UploadOnCloud, DeleteFromCloud } from "../utils/CloudinaryUpload.js";
+import { UploadOnCloud } from "../utils/Cloudinary.js";
 import jwt from "jsonwebtoken";
 
 const registerUser = AsyncHandler(async (req, res) => {

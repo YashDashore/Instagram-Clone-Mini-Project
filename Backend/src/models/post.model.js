@@ -8,7 +8,7 @@ const PostSchema = new mongoose.Schema({
         required: true
     },
     likes: [{
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }],
     comments: [{
@@ -23,7 +23,9 @@ const PostSchema = new mongoose.Schema({
         }
     }],
     postedBy: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }
 }, { timestamps: true });
+
+export const Post = mongoose.model("Post", PostSchema);
