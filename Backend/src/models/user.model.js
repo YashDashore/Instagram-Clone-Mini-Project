@@ -25,13 +25,17 @@ const UserSchema = new mongoose.Schema({
         type: String,
     },
     followers: [{
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }],
     following: [{
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User"
-    }]
+    }],
+    serverRefreshToken: {
+        type: String,
+        select: false
+    }
 }, { timestamps: true })
 
 UserSchema.pre("save", async function (next) {
